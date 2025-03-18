@@ -31,7 +31,7 @@ export async function generateMetadata(
     openGraph: {
       title: product?.title ?? 'Producto no encontrado',
       description: product?.description ?? '',
-      images: [`/products/${product?.images[1]}`],
+      images: [`https://teslo-shop-feribarra.vercel.app/products/${product?.images[1]}`],
     },
   }
 }
