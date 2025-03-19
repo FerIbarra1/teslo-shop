@@ -22,6 +22,9 @@ export const PlaceOrder = () => {
     const clearCart = useCartStore(state => state.clearCart);
 
     useEffect(() => {
+        if (itemsInCart === 0) {
+            redirect('/');
+        }
         setLoaded(true);
     }, [])
 
@@ -50,9 +53,6 @@ export const PlaceOrder = () => {
         return <p>Cargando...</p>
     }
 
-     if(itemsInCart === 0) {
-            redirect('/');
-        }
 
     return (
         <div className="bg-white rounded-xl shadow-xl p-7">
